@@ -1,12 +1,19 @@
-'use client';
-import { useEffect } from 'react'
 import Image from 'next/image'
 import Script from 'next/script'
 import React from 'react'
+import Lsscorecard from './Lsscorecard';
 
+const Matchlist = async () => {
 
-
-const Matchlist = () => {
+    const url = 'http://127.0.0.1:5000/schedule';
+  
+    const res = await fetch(url);
+    const data = await res.json();
+    const maindata = JSON.parse(data); 
+    
+    // console.log(maindata);
+    const matchlist = maindata.matchlist;
+    // console.log(matchlist);
   return (
     <>
     <Script src='/flowbite.min.js'/>
@@ -130,216 +137,16 @@ const Matchlist = () => {
         </button>
     </div>
 
-    <div class="bg-blue-400 shadow-2xl col-span-2 hidden p-4 sm:overflow-y-scroll sm:gap-y-4 sm:flex sm:h-[43rem] sm:flex-col">
-        <div class="rounded-2xl bg-gray-100 transition ease-out duration-700 hover:bg-gray-300 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">41th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">42th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">42th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div><div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div><div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div><div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">43th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
-        <div class="rounded-2xl bg-pink-200 p-4 h-56 min-w-full shadow-2xl ">
-          <h1 class="text-lg py-2">46th Match <span>&middot;</span> Indian premier League 2023</h1>
-          <div class="pt-4 pb-1 flex-col">
-            <div class="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow  text-lg font-serif">RCB</span>
-              <p class="text-xl fontbold font-sans">126-9 (20)</p>
-            </div>
-            <div class="flex gap-x-3">
-              <Image src="/lsg_log.jpg" class="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
-              <span class="flex-grow">LSG</span>
-              <p class="text-xl fontbold font-sans">108 (19.5)</p>
-            </div>
-          </div>
-          <p class="">Royal Challenge banglore Won by 18r...</p>
-        </div>
+    <div className="bg-blue-400 shadow-2xl col-span-2 hidden p-4 sm:overflow-y-scroll sm:gap-y-4 sm:flex sm:h-[43rem] sm:flex-col">
+      {
+        matchlist.slice(0,6).map((currele, index)=>{
+          return  <Lsscorecard key={index} {...currele} />
+        })
+      }
     </div>
     </>
   )
 }
 
-
-export default function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // Polyfill for LCP
-      const po = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        console.log('LCP:', entries[entries.length - 1])
-      })
-      po.observe({ type: 'largest-contentful-paint', buffered: true })
-    }
-  }, [])
-
-  return <Matchlist  />
-}
-
-
+export default Matchlist
 

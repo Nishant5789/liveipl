@@ -19,9 +19,9 @@ const Header = () => {
             </div>
             <div>
                  <ul className='hidden sm:flex justify-center items-center  py-4 gap-x-5 text-2xl pr-32'>
-                   <li><Link className='hover:text-red-500 border-b-2 ' href='/movie'>PointTable</Link></li>
-                   <li><Link className='hover:text-red-500 border-b-2 ' href='/about'>All Teams</Link></li>
-                   <li><Link className='hover:text-red-500 border-b-2 ' href='/contact'>Schedule</Link></li>
+                   <li><Link className='hover:text-red-500 border-b-2 ' href='/pointable'>PointTable</Link></li>
+                   <li><Link className='hover:text-red-500 border-b-2 ' href='/allteams'>All Teams</Link></li>
+                   <li><Link className='hover:text-red-500 border-b-2 ' href='/schedule'>Schedule</Link></li>
                  </ul>     
             </div> 
           </div>
