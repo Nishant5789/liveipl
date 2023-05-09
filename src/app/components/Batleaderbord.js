@@ -16,9 +16,9 @@ const Batleaderbord = ({batlist}) => {
         <div className="flex justify-center">
           <ul className="flex flex-col">
           {
-            batlist.splice(1).map((currele, index)=>{
+            batlist.splice(1,4).map((currele, index)=>{
               return <li key={index}>
-              <span className="text-lg font-semibold">{index+1}. </span> 
+              <span className="text-lg font-semibold">{index+2}. </span> 
               {currele.name}</li>;
             })
           }

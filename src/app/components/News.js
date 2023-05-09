@@ -4,11 +4,15 @@ import Newscard from './Newscard';
 
 const News = async () => {
 
-  const url = 'http://127.0.0.1:5000/news';
+  const url = 'http://127.0.0.1:5001/news';
   
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    headers: {
+      'Cache-Control': 'no-cache'
+    }
+  });
   const data = await res.json();
-  const Newslist = JSON.parse(data).seriesnews; 
+  const Newslist = data.seriesnews; 
 
   // console.log(Newslist);
 

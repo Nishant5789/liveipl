@@ -5,14 +5,18 @@ import Lsscorecard from './Lsscorecard';
 
 const Matchlist = async () => {
 
-    const url = 'http://127.0.0.1:5000/schedule';
+    const url = 'http://127.0.0.1:5001/schedule';
   
-    const res = await fetch(url);
+    const res = await fetch(url,  {
+      headers: {
+        'Cache-Control': 'no-cache'
+      }
+    })
     const data = await res.json();
-    const maindata = JSON.parse(data); 
+    // const maindata = JSON.parse(data); 
     
-    // console.log(maindata);
-    const matchlist = maindata.matchlist;
+    // console.log(data);
+    const matchlist = data.livematches;
     // console.log(matchlist);
   return (
     <>
