@@ -25,8 +25,8 @@ const Matchlist = async () => {
           const {description, score1, score2, status, team1, team2} = currele
 
           return( 
-            <div key={index} className="rounded-2xl  h-56 min-w-[30rem] mx-4 shadow-lg bg-slate-200">
-                <h1 className="text-lg bg-slate-400 px-2 py-2">{description}</h1>
+            <div key={index} className="rounded-2xl  h-40 min-w-[20rem] mx-4 shadow-lg bg-slate-200">
+                <h1 className="text-sm bg-slate-400 px-2 py-1">{description}</h1>
                 <div className="pt-4 pb-1 flex-col">
                   <div className="flex justify-around gap-x-3 px-4 pb-3">
                     {/* <Image src="/rcb_logo.jpg" alt="" width={5} height={5} /> */}
