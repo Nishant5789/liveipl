@@ -38,13 +38,14 @@ const Performers = async () => {
            <h2 className="font-serif">{batslist[0].name}</h2>
          </div>
         </div>
-        {/* <div className="flex gap-x-2 px-2 items-center">
+        <div className="flex gap-x-2 px-2 items-center">
          <Image src="/Bowler.jpeg" width={64} height={40}  className="object-cover h-16 rounded-3xl" alt="no pic"/>
          <div>
            <h1 className="font-bold text-xl">Top Wickettaker</h1>
-           <h2 className="font-serif">{bowlslist[0].name}</h2>
+           {/* <h2 className="font-serif">{bowlslist[0].name}</h2> */}
+           <h2 className="font-serif">Rashid Khan</h2>
          </div>
-        </div> */}
+        </div>
      </div>
 
      {/* display on large screen  */}
