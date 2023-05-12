@@ -4,7 +4,10 @@ import Newscard from './Newscard';
 
 const News = async () => {
 
-  const url = 'http://127.0.0.1:5001/news';
+  // const apiurl = 'http://127.0.0.1:5001/news';
+  const apiurl = process.env.IPLAPI_link + "news";
+  const timestamp = Date.now();
+  const url = `${apiurl}?timestamp=${timestamp}`;
   
   const res = await fetch(url, {
     headers: {

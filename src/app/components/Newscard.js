@@ -7,7 +7,7 @@ const Newscard = ({title, description}) => {
     return (
       <>
         <div className="flex p-4 gap-x-2 ">
-              <Image src="/news_vk.jpg" alt="" className="sm:h-32 sm:object-fill" suppressHydrationWarning height={500} width={500} />
+              <Image src="/news_bg.jpeg" alt="" className="sm:h-32 sm:object-fill" suppressHydrationWarning height={500} width={500} />
               <div className="gap-y-2 ">
                 <h1 className="text-xl font-bold">{title}</h1>
                 <p>{shortdescripation}..</p>

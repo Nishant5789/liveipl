@@ -11,12 +11,12 @@ const Lsscorecard = (matchobject) => {
           <h1 className="text-lg py-2">{description}</h1>
           <div className="pt-4 pb-1 flex-col">
             <div className="flex justify-around gap-x-3 pb-3">
-              <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" />
+              {/* <Image src="/rcb_logo.jpg" width={30} height={25}   suppressHydrationWarning alt="" /> */}
               <span className="flex-grow  text-lg font-serif">{team1}</span>
               <p className="text-xl fontbold font-sans">{score1}</p>
             </div>
             <div className="flex gap-x-3">
-              <Image src="/lsg_log.jpg" className="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" />
+              {/* <Image src="/lsg_log.jpg" className="text-lg font-serif" width={30} height={25}   suppressHydrationWarning alt="" /> */}
               <span className="flex-grow">{team2}</span>
               <p className="text-xl fontbold font-sans">{score2}</p>
             </div>

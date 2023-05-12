@@ -5,7 +5,17 @@ import Pointable from '../components/Pointable'
 
 const Pointtable = async () => {
 
-  const res = await fetch("http://127.0.0.1:5000/pointtable")
+  // const apiurl = 'http://127.0.0.1:5001/pointtable';
+  const apiurl = process.env.IPLAPI_link + "pointtable";
+  const timestamp = Date.now();
+  const url = `${apiurl}?timestamp=${timestamp}`;
+  
+  const res = await fetch(url, {
+    headers: {
+      'Cache-Control': 'no-cache'
+    }
+  });
+
   const data = await res.json()
 
   // console.log(data);

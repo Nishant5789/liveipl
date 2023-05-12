@@ -6,7 +6,7 @@ const Batleaderbord = ({batlist}) => {
   return (
     <>
         <div className="flex gap-x-4 py-5 items-center">
-          <Image src="/vk_avatar.jpg" alt="no pic" width={64} height={40} className="object-cover h-16 rounded-3xl" />
+          <Image src="/Batsman.jpeg" alt="no pic" width={64} height={40} className="object-cover h-16 rounded-3xl" />
           <div className="">
             <h1 className="font-bold text-xl">Top Runscorer</h1>
             <h2 className="font-serif"><span className="text-2xl font-semibold">1. </span> {batlist[0].name}</h2>

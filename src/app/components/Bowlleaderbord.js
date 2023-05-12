@@ -5,7 +5,7 @@ const Bowlleaderbord = ({bowllist}) => {
   return (
     <>
        <div className="flex gap-x-2 p-4 items-center">
-          <Image src="/jh_avatar.jpg" width={64} height={40} className="object-cover h-16 rounded-3xl" alt="" />
+          <Image src="/Bowler.jpeg" width={64} height={40} className="object-cover h-16 rounded-3xl" alt="" />
           <div>
             <h1 className="font-bold text-xl">Top Wickettaker</h1>
             <h2 className="font-serif"><span className="text-2xl font-semibold">1. </span>{bowllist[0].name}</h2>
