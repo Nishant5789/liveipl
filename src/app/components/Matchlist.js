@@ -23,9 +23,9 @@ const Matchlist = async () => {
         matchlist.slice(0,6).map((currele, index) => {
 
           const {description, score1, score2, status, team1, team2} = currele
-
+          
           return( 
-            <div key={index} className="rounded-2xl  h-40 min-w-[20rem] mx-4 shadow-lg bg-slate-200">
+            <div key={index} className="rounded-2xl  h-40 sm:h-56  min-w-[20rem] sm:min-w-[30rem] mx-4 shadow-lg bg-slate-200">
                 <h1 className="text-sm bg-slate-400 px-2 py-1">{description}</h1>
                 <div className="pt-4 pb-1 flex-col">
                   <div className="flex justify-around gap-x-3 px-4 pb-3">
